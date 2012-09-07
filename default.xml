@@ -9,6 +9,8 @@
           fetch="git://github.com/mozilla-b2g/" />
   <remote name="mozilla"
 	  fetch="git://github.com/mozilla/" />
+  <remote  name="github"
+           fetch="http://github.com/" />
   <default revision="refs/tags/android-4.0.4_r2.1"
            remote="linaro"
            sync-j="4" />
@@ -22,13 +24,14 @@
   <project path="gecko" name="mozilla-central" remote="mozilla" revision="master" />
   <project path="gonk-misc" name="gonk-misc" remote="b2g" revision="master" />
   <project path="rilproxy" name="rilproxy" remote="b2g" revision="master" />
-  <project path="hardware/ril" name="platform_hardware_ril" remote="b2g" revision="master"/>
-  <project path="external/qemu" name="platform_external_qemu" remote="b2g" revision="master"/>
+  <!--<project path="hardware/ril" name="platform_hardware_ril" remote="b2g" revision="master"/>-->
+  <project path="hardware/ril" name="tpruvot/android_hardware_ril" remote="github" revision="ics" />
 
   <!-- Stock Android things -->
   <project path="abi/cpp" name="platform/abi/cpp" />
   <project path="bionic" name="platform/bionic" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <!--<project path="bootable/recovery" name="platform/bootable/recovery" />-->
+  <project path="bootable/recovery" name="tpruvot/android_bootable_recovery" remote="github" revision="ics" />
   <project path="device/common" name="device/common" />
   <project path="device/sample" name="device/sample" />
   <project path="external/apache-http" name="platform/external/apache-http" />
@@ -78,8 +81,10 @@
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
   <project path="external/zlib" name="platform/external/zlib" />
-  <project path="external/yaffs2" name="platform/external/yaffs2" />
-  <project path="frameworks/base" name="platform/frameworks/base" revision="612ca9c6a55bd932c45f5b85ae932a1b712dd914" />
+  <!--<project path="external/yaffs2" name="platform/external/yaffs2" />-->
+  <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" remote="github" revision="ics" />
+  <!--<project path="frameworks/base" name="platform/frameworks/base" revision="612ca9c6a55bd932c45f5b85ae932a1b712dd914" />-->
+  <project path="frameworks/base" name="M1cha/platform_frameworks_base" remote="github" revision="B2G-mb525" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/support" name="platform/frameworks/support" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
@@ -88,19 +93,28 @@
   <project path="ndk" name="platform/ndk" />
   <project path="prebuilt" name="platform/prebuilt" revision="master" />
   <project path="system/bluetooth" name="platform/system/bluetooth" />
-  <project path="system/core" name="platform/system/core" revision="91e5551f88aea5aa64e1b4f8b4b52d7be2b28b64" />
+  <!--<project path="system/core" name="platform/system/core" revision="91e5551f88aea5aa64e1b4f8b4b52d7be2b28b64" />-->
+  <project path="system/core" name="M1cha/platform_system_core" remote="github" revision="B2G-ics" />
   <project path="system/extras" name="platform/system/extras" />
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
 
-  <!-- Emulator specific things -->
-  <project path="development" name="platform/development" revision="435a7da6d02083ba6583e1654db351991cf79578" />
-  <project path="device/generic/goldfish" name="device/generic/goldfish" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" revision="master" />
-  <project path="prebuilts/tools" name="platform/prebuilts/tools" revision="master" />
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" revision="master" />
-  <project path="sdk" name="platform/sdk" revision="0d8f973905a4925e00eb9e32887c192b2148b29f" />
-
+  <!-- jordan: general -->
+  <project path="device/motorola/jordan" name="M1cha/android_device_motorola_jordan" remote="github" revision="ics_mb525" />
+  <project path="vendor/motorola" name="M1cha/proprietary_vendor_motorola" remote="github" revision="B2G-ics" />
+  <project path="external/bootmenu" name="tpruvot/android_external_bootmenu" remote="github" revision="touch" />
+  <project path="hardware/ti/omap3" name="tpruvot/android_hardware_ti_omap3-compat" remote="github" revision="ics" />
+  
+  <!-- jordan: depencies -->
+  <project path="external/busybox" name="tpruvot/android_external_busybox" remote="github" revision="ics" />
+  <project path="external/pigz" name="tpruvot/android_external_pigz" remote="github" revision="ics" />
+  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="ics" />
+  <project path="external/lsof" name="CyanogenMod/android_external_lsof" remote="github" revision="ics" />
+  
+  <!-- jordan: wifi -->
+  <project path="external/wpa_supplicant_6" name="tpruvot/android_external_wpa_supplicant_6" remote="github" revision="ics" />
+  <project path="system/wlan/ti" name="tpruvot/android_system_wlan_ti" remote="github" revision="gingerbread" />
+  <project path="hardware/ti/wlan" name="CyanogenDefy/android_hardware_ti_wlan" remote="github" revision="ics" />
+  <project path="external/hostapd" name="tpruvot/android_external_hostapd" remote="github" revision="ics" />
 </manifest>
