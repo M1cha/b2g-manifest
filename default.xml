@@ -16,7 +16,7 @@
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
-  <project path="build" name="platform_build" remote="b2g" revision="master">
+  <project path="build" name="M1cha/platform_build" remote="github" revision="master">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="dalvik" name="fake-dalvik" remote="b2g" revision="master" />
@@ -91,7 +91,7 @@
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" revision="af9565aa8be0136463ec549d9d3abdd906d2c390" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
-  <project path="prebuilt" name="platform/prebuilt" revision="master" />
+  <project path="prebuilt" name="M1cha/platform_prebuilt" remote="github" revision="B2G-ics" />
   <project path="system/bluetooth" name="platform/system/bluetooth" />
   <!--<project path="system/core" name="platform/system/core" revision="91e5551f88aea5aa64e1b4f8b4b52d7be2b28b64" />-->
   <project path="system/core" name="M1cha/platform_system_core" remote="github" revision="B2G-ics" />
@@ -111,6 +111,7 @@
   <project path="external/pigz" name="tpruvot/android_external_pigz" remote="github" revision="ics" />
   <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="ics" />
   <project path="external/lsof" name="CyanogenMod/android_external_lsof" remote="github" revision="ics" />
+  <project path="external/genext2fs" name="CyanogenMod/android_external_genext2fs" remote="github" revision="ics" />
   
   <!-- jordan: wifi -->
   <project path="external/wpa_supplicant_6" name="tpruvot/android_external_wpa_supplicant_6" remote="github" revision="ics" />
