@@ -24,13 +24,11 @@
   <project path="gecko" name="mozilla-central" remote="mozilla" revision="master" />
   <project path="gonk-misc" name="gonk-misc" remote="b2g" revision="master" />
   <project path="rilproxy" name="rilproxy" remote="b2g" revision="master" />
-  <!--<project path="hardware/ril" name="platform_hardware_ril" remote="b2g" revision="master"/>-->
   <project path="hardware/ril" name="tpruvot/android_hardware_ril" remote="github" revision="ics" />
 
   <!-- Stock Android things -->
   <project path="abi/cpp" name="platform/abi/cpp" />
   <project path="bionic" name="platform/bionic" />
-  <!--<project path="bootable/recovery" name="platform/bootable/recovery" />-->
   <project path="bootable/recovery" name="tpruvot/android_bootable_recovery" remote="github" revision="ics" />
   <project path="device/common" name="device/common" />
   <project path="device/sample" name="device/sample" />
@@ -81,9 +79,7 @@
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
   <project path="external/zlib" name="platform/external/zlib" />
-  <!--<project path="external/yaffs2" name="platform/external/yaffs2" />-->
   <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" remote="github" revision="ics" />
-  <!--<project path="frameworks/base" name="platform/frameworks/base" revision="612ca9c6a55bd932c45f5b85ae932a1b712dd914" />-->
   <project path="frameworks/base" name="M1cha/platform_frameworks_base" remote="github" revision="B2G-mb525" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -93,7 +89,6 @@
   <project path="ndk" name="platform/ndk" />
   <project path="prebuilt" name="M1cha/platform_prebuilt" remote="github" revision="B2G-ics" />
   <project path="system/bluetooth" name="platform/system/bluetooth" />
-  <!--<project path="system/core" name="platform/system/core" revision="91e5551f88aea5aa64e1b4f8b4b52d7be2b28b64" />-->
   <project path="system/core" name="M1cha/platform_system_core" remote="github" revision="B2G-ics" />
   <project path="system/extras" name="platform/system/extras" />
   <project path="system/media" name="platform/system/media" />
@@ -106,7 +101,7 @@
   <project path="external/bootmenu" name="tpruvot/android_external_bootmenu" remote="github" revision="touch" />
   <project path="hardware/ti/omap3" name="tpruvot/android_hardware_ti_omap3-compat" remote="github" revision="ics" />
   
-  <!-- jordan: depencies -->
+  <!-- jordan: dependencies -->
   <project path="external/busybox" name="tpruvot/android_external_busybox" remote="github" revision="ics" />
   <project path="external/pigz" name="tpruvot/android_external_pigz" remote="github" revision="ics" />
   <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="ics" />
